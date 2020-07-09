@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		DCC51F8324B6DA77002345CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC51F8224B6DA77002345CA /* Assets.xcassets */; };
 		DCC51F8624B6DA77002345CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC51F8524B6DA77002345CA /* Preview Assets.xcassets */; };
 		DCC51F8924B6DA77002345CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC51F8724B6DA77002345CA /* LaunchScreen.storyboard */; };
+		DCC51F9224B6DD0C002345CA /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = DCC51F9124B6DD0C002345CA /* Nuke */; };
+		DCC51F9524B6DDC7002345CA /* FetchImage in Frameworks */ = {isa = PBXBuildFile; productRef = DCC51F9424B6DDC7002345CA /* FetchImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC51F9224B6DD0C002345CA /* Nuke in Frameworks */,
+				DCC51F9524B6DDC7002345CA /* FetchImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +95,10 @@
 			dependencies = (
 			);
 			name = "swiftui-customalignment";
+			packageProductDependencies = (
+				DCC51F9124B6DD0C002345CA /* Nuke */,
+				DCC51F9424B6DDC7002345CA /* FetchImage */,
+			);
 			productName = "swiftui-customalignment";
 			productReference = DCC51F7924B6DA74002345CA /* swiftui-customalignment.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +127,10 @@
 				Base,
 			);
 			mainGroup = DCC51F7024B6DA74002345CA;
+			packageReferences = (
+				DCC51F9024B6DD0C002345CA /* XCRemoteSwiftPackageReference "Nuke" */,
+				DCC51F9324B6DDC7002345CA /* XCRemoteSwiftPackageReference "FetchImage" */,
+			);
 			productRefGroup = DCC51F7A24B6DA74002345CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -342,6 +354,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCC51F9024B6DD0C002345CA /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.1;
+			};
+		};
+		DCC51F9324B6DDC7002345CA /* XCRemoteSwiftPackageReference "FetchImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/FetchImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCC51F9124B6DD0C002345CA /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCC51F9024B6DD0C002345CA /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		DCC51F9424B6DDC7002345CA /* FetchImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCC51F9324B6DDC7002345CA /* XCRemoteSwiftPackageReference "FetchImage" */;
+			productName = FetchImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCC51F7124B6DA74002345CA /* Project object */;
 }
