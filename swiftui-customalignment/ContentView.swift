@@ -3,11 +3,21 @@
 import SwiftUI
 import FetchImage
 
+extension VerticalAlignment {
+    enum HandleAccountNameGuide: AlignmentID {
+        static func defaultValue(in context: ViewDimensions) -> CGFloat {
+            context[.top]
+        }
+    }
+    static let midAccountAndName = VerticalAlignment(HandleAccountNameGuide.self)
+}
+
 struct ContentView: View {
     var body: some View {
-        HStack {
+        HStack(alignment: .midAccountAndName) {
             VStack {
                 Text("@rodrigoelp")
+                    .alignmentGuide(.midAccountAndName) { $0[VerticalAlignment.center] }
                 ImageView(image: FetchImage(
                     regularUrl: URL(string: "https://i.pravatar.cc/300")!,
                     lowDataUrl: URL(string: "https://i.pravatar.cc/100")!))
@@ -19,6 +29,7 @@ struct ContentView: View {
                 Text("Account")
                 Text("Rod Landaeta")
                     .font(.largeTitle)
+                    .alignmentGuide(.midAccountAndName) { $0[VerticalAlignment.center] }
             }
         }
     }
